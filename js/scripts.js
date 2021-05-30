@@ -1,41 +1,39 @@
-$(window).load(function () {
+$(window).load(() => {
 
-  var body = $("body"),
+  const body = $("body"),
     universe = $("#universe"),
     solarsys = $("#solar-system");
 
-  var init = function () {
-    body.removeClass('view-2D opening').addClass("view-3D").delay(2000).queue(function () {
-      $(this).removeClass('hide-UI').addClass("set-speed");
-      $(this).dequeue();
+  const init = () => {
+    body.removeClass('view-2D opening').addClass("view-3D").delay(2000).queue(() => {
+      $(body).removeClass('hide-UI').addClass("set-speed");
+      $(body).dequeue();
     });
   };
 
-  var setView = function (view) { universe.removeClass().addClass(view); };
-
-  $("#toggle-data").click(function (e) {
+  $("#toggle-data").click((e) => {
+    e.preventDefault();
     body.toggleClass("data-open data-close");
-    e.preventDefault();
   });
 
-  $("#toggle-controls").click(function (e) {
+  $("#toggle-controls").click((e) => {
+    e.preventDefault();
     body.toggleClass("controls-open controls-close");
-    e.preventDefault();
   });
 
-  $("#data a").click(function (e) {
-    var ref = $(this).attr("class");
+  $("#data a").click((e) => {
+    e.preventDefault();
+    let ref = $(e.target).attr("class");
     solarsys.removeClass().addClass(ref);
-    $(this).parent().find('a').removeClass('active');
-    $(this).addClass('active');
-    e.preventDefault();
+    $(e.target).parent().find('a').removeClass('active');
+    $(e.target).addClass('active');
   });
 
-  $(".set-view").click(function () { body.toggleClass("view-3D view-2D"); });
-  $(".set-zoom").click(function () { body.toggleClass("zoom-large zoom-close"); });
-  $(".set-speed").click(function () { setView("scale-stretched set-speed"); });
-  $(".set-size").click(function () { setView("scale-s set-size"); });
-  $(".set-distance").click(function () { setView("scale-d set-distance"); });
+  $(".set-view").click(() => { body.toggleClass("view-3D view-2D"); });
+  $(".set-zoom").click(() => { body.toggleClass("zoom-large zoom-close"); });
+  $(".set-speed").click(() => { universe.removeClass().addClass("scale-stretched set-speed"); });
+  $(".set-size").click(() => { universe.removeClass().addClass("scale-s set-size"); });
+  $(".set-distance").click(() => { universe.removeClass().addClass("scale-d set-distance"); });
 
   init();
 
