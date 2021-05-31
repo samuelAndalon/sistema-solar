@@ -21,7 +21,7 @@ $(window).load(() => {
     body.toggleClass("controls-open controls-close");
   });
 
-  $("#data a").click((e) => {
+  $("#data .planets").click((e) => {
     e.preventDefault();
     let ref = $(e.target).attr("class");
     solarsys.removeClass().addClass(ref);
