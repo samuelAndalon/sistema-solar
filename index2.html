@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title dir="ltr">WTF</title>
+  <style>
+    input, select, .result {
+      width: 40px;
+      font-size:30px;
+      text-align: center;
+    }
+    .operator, .result {
+      text-align: center;
+    }
+    input#result {
+      border: 2px solid green;
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <select class="operator" maxlength="1" type="text">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+  </select>
+  <input type="text" value="1" readonly>
+  <select class="operator" maxlength="1" type="text">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+  </select>
+  <input type="text" value="2" readonly>
+  <select class="operator" maxlength="1" type="text" disabled>
+    <option selected>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+  </select>
+  <input type="text" value="3" readonly>
+  <select class="operator" maxlength="1" type="text">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+  </select>
+  <input type="text" value="4" readonly>
+  <select class="operator" maxlength="1" type="text">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+  </select>
+  <input type="text" value="5" readonly>
+  <select class="operator" maxlength="1" type="text">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+  </select>
+  <input type="text" value="6" readonly>
+  <select class="operator" maxlength="1" type="text">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+  </select>
+  <input type="text" value="7" readonly>
+  <select class="operator" maxlength="1" type="text" disabled>
+    <option>+</option>
+    <option selected>-</option>
+    <option>*</option>
+    <option>/</option>
+  </select>
+  <input type="text" value="8" readonly>
+  <select class="operator" maxlength="1" type="text">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+  </select>
+  <input type="text" value="9" readonly>
+  <input class="result" maxlength="1" type="text" value="=" id="equal" readonly>
+  <input class="result" style="width: 100px;" maxlength="1" type="text" value="" id="result" readonly>
+
+  <br/>
+
+  <button type="button" id="calculate">Calcular</button>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
